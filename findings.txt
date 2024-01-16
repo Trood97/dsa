@@ -1,0 +1,97 @@
+min(x) and max(x) functions
+
+sum(s)   #sum of list or string.
+
+sorted(y)  #sorting throught alphabetically.
+
+print(sorted(z,key=lambda z:z[1]))
+
+x.index('item') returns the index of an item.
+
+upacking of items:
+z = ['anand','Troodon']
+a,b = z
+
+Extending current list:
+print(z.extend(z1))
+
+list sorting :
+z.sort(reverse=True)  #sorts the same list without creating the new one.
+ab = sorted(z)    # creates a new list of sorted list and does not change the original list
+
+tuple:
+tuple1 = 2,   # comma determines it is a tuple , comma is a dealbreaker for a tuple.
+
+list comprehension:
+list_com = [i for i in range(10)]
+
+ab = [i for i in z if not i.isalpha()]
+
+print(('').join(ab))
+
+
+LIFO = Last In First Out.
+LIFO is a data structure. Stack is a LIFO data structure.
+
+
+Stack : LIFO
+class Stack():
+    def __init__(self):
+        self.ls = []
+
+    def push(self,item):
+        self.ls.append(item)
+        return self.ls
+
+    def pop(self):
+        if len(self.ls) > 0:
+            self.ls.pop()
+        else:
+            return None
+
+    def peek(self):
+        if len(self.ls)>0:
+            return self.ls[len(self.ls)-1]
+        else:
+            return None
+
+
+ab = Stack()
+ab.push(1)
+print(ab.push(2))
+ab.pop()
+print(ab.peek())
+ab.pop()
+print(ab.peek())
+############################
+
+
+FIFO is a data structure, queue is a FIFO data structure.
+from collections import deque
+
+q1 = deque()
+
+q1.append(1)
+q1.append(2)
+
+print(q1)
+
+q1.popleft()
+
+print(q1)
+
+###############################
+
+
+#all function():
+print(all([1,1,2,3,4,5,True]))   #returns True if all the elements are true or not zero.
+
+
+
+
+
+
+
+
+
+
